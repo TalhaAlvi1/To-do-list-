@@ -38,7 +38,6 @@ class Task implements Serializable {
         return (isComplete ? "[Done] " : "[ ] ") + description;
     }
 }
-
 public class GUI extends JFrame {
     private TaskManager taskManager;
     private DefaultListModel<String> taskListModel;
@@ -55,8 +54,7 @@ public class GUI extends JFrame {
         setSize(400, 400);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
-        
-        // Task input field
+
         taskInput = new JTextField(20);
         JButton addButton = new JButton("Add Task");
         addButton.addActionListener(new AddButtonListener());
@@ -65,7 +63,6 @@ public class GUI extends JFrame {
         inputPanel.add(taskInput);
         inputPanel.add(addButton);
 
-        // Buttons for actions
         JButton completeButton = new JButton("Mark Complete");
         JButton deleteButton = new JButton("Delete Task");
         JButton editButton = new JButton("Edit Task");
@@ -79,13 +76,11 @@ public class GUI extends JFrame {
         buttonPanel.add(deleteButton);
         buttonPanel.add(editButton);
 
-        // Layout setup
         setLayout(new BorderLayout());
         add(inputPanel, BorderLayout.NORTH);
         add(new JScrollPane(taskList), BorderLayout.CENTER);
         add(buttonPanel, BorderLayout.SOUTH);
 
-        // Update the initial list
         refreshTaskList();
     }
 
