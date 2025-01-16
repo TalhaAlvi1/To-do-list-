@@ -116,7 +116,6 @@ public class GUI extends JFrame {
             }
         }
     }
-
     private class DeleteButtonListener implements ActionListener {
         @Override
         public void actionPerformed(ActionEvent e) {
@@ -127,7 +126,6 @@ public class GUI extends JFrame {
             }
         }
     }
-
     private class EditButtonListener implements ActionListener {
         @Override
         public void actionPerformed(ActionEvent e) {
@@ -143,7 +141,6 @@ public class GUI extends JFrame {
             }
         }
     }
-
     public static void main(String[] args) {
         SwingUtilities.invokeLater(() -> {
             GUI toDoListGUI = new GUI();
